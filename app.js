@@ -47,3 +47,13 @@ function encryptMessage (word, shift)
 - Use the modulus operator to ensure wrapping around the alphabet if necessary. Remember to handle negative values correctly.
 - Return the decrypted letter.
 */
+
+function decryptLetter (letter, shift)
+{
+    //index of letter
+  const index = alphabet.indexOf(letter.toLowerCase());
+  //subtract shift value from index + modulus operator
+  const newIndex = (index - shift + alphabet.length) % alphabet.length;
+  //return decrypted letter
+  return alphabet[newIndex];
+}
