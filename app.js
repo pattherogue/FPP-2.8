@@ -57,3 +57,29 @@ function decryptLetter (letter, shift)
   //return decrypted letter
   return alphabet[newIndex];
 }
+
+//Create a function named `decryptMessage` that takes an encrypted word and a shift value as parameters. This function should return the decrypted version of the entire word.
+/*
+- Use a loop to iterate over each letter in the word.
+- For each letter, call the `decryptLetter` function.
+- Construct the decrypted message.
+- Return the decrypted message.
+*/
+
+function decryptMessage (word, shift)
+{
+  let decryptedMessage = "";
+  //loop to iterate 
+  for (let i = 0; i < word.length; i++)
+  {
+    //call decryptLetter fuction and construc
+    decryptedMessage += decryptLetter(word[i], shift);
+  }
+  //return decrypted message
+  return decryptedMessage;
+}
+
+//If Caesar encrypts the word "BRUTUS" using our encryptMessage function and then decrypts the result using our decryptMessage function, will he get "BRUTUS" back? Why or why not?
+// Yes, Caesar can retrieve 'BRUTUS' using the decryption function, which undoes the encryption when applied in sequence, restoring the original message.
+
+
