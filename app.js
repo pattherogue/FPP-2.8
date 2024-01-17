@@ -11,8 +11,9 @@ const alphabet = "abcdefghijklmnopqrstuvwxyz";
 - Use the modulus operator to ensure wrapping around the alphabet if necessary.
 - Return the encrypted letter.
 */
-
-
-function encryptLetter(letter, shift) {
-
+function encryptLetter (letter, shift)
+{
+  const index = alphabet.indexOf(letter.toLowerCase());
+  const newIndex = (index + shift) % alphabet.length;
+  return alphabet[newIndex];
 }
